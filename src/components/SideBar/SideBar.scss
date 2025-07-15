@@ -1,0 +1,32 @@
+.side-bar {
+  width: 340px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  top: 0;
+  height: 100vh;
+  background-color: white;
+  color: black;
+}
+.button {
+  position: absolute;
+  top: 25px;
+  left: 24px;
+  background-color: transparent;
+  border: none;
+}
+.link-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  height: auto;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.bg {
+  position: sticky;
+  top: 0;
+  height: auto;
+}
