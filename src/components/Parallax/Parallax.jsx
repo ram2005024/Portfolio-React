@@ -27,11 +27,21 @@ const Parallax = ({ type }) => {
       >
         {type === "parallax1" ? "What We Do?" : "What We Did?"}
       </motion.h1>
-      <motion.div className="mountains"></motion.div>
+      <motion.div
+        className="mountains"
+        style={{
+          background: `url("/mountains.png")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      ></motion.div>
       <motion.div
         className="stars"
         style={{
           x: transformY,
+          backgroundImage: `url("/stars.png")`,
+          backgroundSize: "cover",
+          backgroundPosition: "bottom",
         }}
       ></motion.div>
       <motion.div
@@ -39,7 +49,9 @@ const Parallax = ({ type }) => {
         style={{
           y: transformY,
           backgroundImage:
-            type === "parallax1" ? "url('./planets.png')" : "url('./sun.png')",
+            type === "parallax1"
+              ? "url({'./planets.png'})"
+              : "url('./sun.png')",
         }}
       ></motion.div>
     </motion.div>

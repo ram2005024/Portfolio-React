@@ -4,7 +4,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: (180deg, #0c0c1d, #111132);
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+
   gap: 30px;
 
   justify-content: center;
@@ -67,7 +68,7 @@
         font-weight: 100;
         font-size: 100px;
         @include mobile {
-          font-size: 50px;
+          font-size: 20px;
         }
         b {
           font-weight: 500;
@@ -119,22 +120,21 @@
       flex-direction: column;
       justify-content: center;
       @include mobile {
-        font-size: 14px;
-        width: 100px;
-        height: 150px;
+        width: 120px;
+        height: 100px;
         padding: 10px;
       }
-      p {
-        @include mobile {
-          display: none;
-        }
+    }
+    p {
+      @include mobile {
+        display: none;
       }
+    }
 
-      button {
-        height: 40px;
-        border: none;
-        background: orange;
-      }
+    button {
+      height: 40px;
+      border: none;
+      background: orange;
     }
   }
 }
