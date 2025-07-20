@@ -1,3 +1,4 @@
+@import "../../styles/mixins";
 .portfolio-container {
   position: relative;
   .mainTitle {
@@ -7,7 +8,12 @@
     text-align: center;
     padding-top: 50px;
     font-size: 32px;
+
     color: orange;
+    @include mobile {
+      font-size: 20px;
+      color: yellow;
+    }
   }
   .progressBar {
     height: 10px;
@@ -24,26 +30,53 @@
   margin: auto;
   gap: 40px;
   max-width: 1366px;
+  @include mobile {
+    flex-direction: column;
+    gap: 20px;
+  }
   .image-wrapper {
-    height: 55%;
-    width: auto;
+    height: 50%;
+    width: 100%;
+    @include mobile {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
     img {
-      flex: 1;
       height: 100%;
       width: 600px;
       object-fit: cover;
+      @include mobile {
+        width: auto;
+        height: 60%;
+      }
     }
   }
   .title-wrapper {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @include mobile {
+      gap: 10px;
+      y: auto;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      width: auto;
+    }
     h1 {
       font-size: 80px;
+      @include mobile {
+        font-size: 40px;
+        text-align: center;
+      }
     }
     p {
       color: gray;
       font-size: 1.3rem;
+      @include mobile {
+        text-align: center;
+      }
     }
 
     button {

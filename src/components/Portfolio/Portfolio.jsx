@@ -1,5 +1,5 @@
 import "./Portfolio.scss";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const Portfolio = () => {
   const ref = useRef();
@@ -46,11 +46,23 @@ const Portfolio = () => {
     },
   ];
   const SingleItem = ({ items }) => {
+    const [onMobile, setOnMobile] = useState(false);
+    useEffect(() => {
+      const checkOnMobile = () => {
+        setOnMobile(window.innerWidth <= 830);
+      };
+      checkOnMobile();
+      window.addEventListener("resize", checkOnMobile);
+      return () => {
+        window.removeEventListener("resize", checkOnMobile);
+      };
+    }, []);
     const imageRef = useRef();
     const { scrollYProgress } = useScroll({
       target: imageRef,
     });
-    const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+    const yCondition = onMobile ? [-50, 100] : [-300, 300];
+    const y = useTransform(scrollYProgress, [0, 1], yCondition);
     return (
       <section id="Portfolio">
         <div className="container">
