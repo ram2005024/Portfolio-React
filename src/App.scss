@@ -6,6 +6,9 @@ html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
+body {
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -31,4 +34,9 @@ a {
   height: 100px;
   width: 200px;
   background-color: whitesmoke;
+}
+@mixin mobile {
+  @media (max-width: 942px) {
+    @content;
+  }
 }

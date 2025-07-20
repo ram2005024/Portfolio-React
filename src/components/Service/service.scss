@@ -1,0 +1,140 @@
+@import "../../styles/mixins";
+.service-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: (180deg, #0c0c1d, #111132);
+  gap: 30px;
+
+  justify-content: center;
+  align-items: center;
+  @include mobile {
+    gap: 10px;
+  }
+  .title-container {
+    flex: 1;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    gap: 15px;
+    @include mobile {
+      align-self: center;
+    }
+    p {
+      text-align: right;
+      font-weight: 100;
+      font-size: 1.2rem;
+      color: gray;
+      @include mobile {
+        text-align: center;
+        font-size: 0.8rem;
+      }
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.1px solid gray;
+      color: gray;
+      font-weight: 100;
+      @include mobile {
+        width: 200px;
+      }
+    }
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    flex: 2;
+    gap: 10px;
+    .first-text-container {
+      display: flex;
+      gap: 40px;
+
+      img {
+        width: 250px;
+        height: 100px;
+        border-radius: 60px;
+        @include mobile {
+          width: 150px;
+          height: 80px;
+        }
+      }
+      p {
+        font-weight: 100;
+        font-size: 100px;
+        @include mobile {
+          font-size: 50px;
+        }
+        b {
+          font-weight: 500;
+        }
+      }
+    }
+    .second-text-container {
+      display: flex;
+      gap: 40px;
+      p {
+        font-weight: 100;
+        font-size: 80px;
+        @include mobile {
+          font-size: 50px;
+        }
+      }
+      div {
+        button {
+          width: 250px;
+          height: 100px;
+          cursor: pointer;
+          text-align: center;
+          border-radius: 50px;
+          font-weight: 300;
+          font-size: 24px;
+          background: orange;
+          @include mobile {
+            font-size: 20px;
+            width: max-content + 2px;
+            height: 70px;
+          }
+        }
+      }
+    }
+  }
+  .box-container {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+
+    div {
+      display: flex;
+      box-shadow: 0 0 0 0.5px white;
+      width: 350px;
+      border: none;
+      height: 350px;
+      padding: 40px;
+      gap: 10px;
+      flex-direction: column;
+      justify-content: center;
+      @include mobile {
+        font-size: 14px;
+        width: 100px;
+        height: 150px;
+        padding: 10px;
+      }
+      p {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      button {
+        height: 40px;
+        border: none;
+        background: orange;
+      }
+    }
+  }
+}

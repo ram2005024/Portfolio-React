@@ -1,0 +1,61 @@
+.portfolio-container {
+  position: relative;
+  .mainTitle {
+    position: sticky;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 32px;
+    color: orange;
+  }
+  .progressBar {
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+  }
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 40px;
+  max-width: 1366px;
+  .image-wrapper {
+    height: 55%;
+    width: auto;
+    img {
+      flex: 1;
+      height: 100%;
+      width: 600px;
+      object-fit: cover;
+    }
+  }
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    h1 {
+      font-size: 80px;
+    }
+    p {
+      color: gray;
+      font-size: 1.3rem;
+    }
+
+    button {
+      border: transparent;
+      background-color: orange;
+      height: auto;
+      width: 200px;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+}

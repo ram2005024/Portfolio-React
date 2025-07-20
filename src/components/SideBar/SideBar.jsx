@@ -16,7 +16,8 @@ const SideBar = () => {
     closing: {
       clipPath: "circle(30px at 50px 50px)",
       transition: {
-        duration: 0.4,
+        delay: 0.6,
+        duration: 0.2,
       },
     },
   };
@@ -29,7 +30,7 @@ const SideBar = () => {
     >
       <ToggleBtn isOpen={opening} changeState={changeState} />
       <motion.div className="bg">
-        <Link />
+        <Link opening={opening} />
       </motion.div>
     </motion.div>
   );

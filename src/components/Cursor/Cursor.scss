@@ -1,0 +1,12 @@
+@import "../../styles/mixins";
+.cursor-container {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: fixed;
+  border: solid white 2px;
+  z-index: 9999;
+  @include mobile {
+    display: none;
+  }
+}
