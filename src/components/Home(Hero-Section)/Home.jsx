@@ -52,6 +52,7 @@ const Home = () => {
               View my work
             </motion.button>
             <motion.button
+           
               initial={{ x: -1000 }}
               animate={{ x: 0 }}
               transition={{

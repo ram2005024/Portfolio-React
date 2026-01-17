@@ -37,13 +37,13 @@ const Nav = () => {
           "
             />
           </a>
-          <a href="https://www.instagram.com/shekhar20050.24/">
+          <a href="https://www.instagram.com/shekharcyrus/">
             <img
               src="/instagram.png
           "
             />
           </a>
-          <a href="https://x.com/Shekhar10276577">
+          <a href="https://x.com/shekhar_1010">
             <img
               src="twitter.png
           "
