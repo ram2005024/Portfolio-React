@@ -1,7 +1,7 @@
 import "./App.scss";
 import Contact from "./components/Contact/Contact";
 import Cursor from "./components/Cursor/Cursor";
-import Home from "./components/Home/home";
+import Home from "./components/Home/Home";
 import Nav from "./components/Nav";
 import Parallax from "./components/Parallax/Parallax";
 import Portfolio from "./components/Portfolio/Portfolio";
