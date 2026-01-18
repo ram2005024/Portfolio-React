@@ -1,0 +1,113 @@
+@import "../../styles/mixins";
+.portfolio-container {
+  position: relative;
+  .mainTitle {
+    position: sticky;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 32px;
+
+    color: orange;
+    @include mobile {
+      font-size: 20px;
+      color: yellow;
+    }
+  }
+  .progressBar {
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+  }
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 40px;
+  max-width: 1366px;
+  @include mobile {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .image-wrapper {
+    height: 50%;
+    width: 100%;
+    @include mobile {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    img {
+      height: 100%;
+      width: 600px;
+      object-fit: contain;
+      @include mobile {
+        width: auto;
+        height: 60%;
+      }
+    }
+  }
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include mobile {
+      gap: 10px;
+      y: auto;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      width: auto;
+    }
+    h1 {
+      font-size: 80px;
+      @include mobile {
+        font-size: 40px;
+        text-align: center;
+      }
+    }
+    p {
+      color: gray;
+      font-size: 1.3rem;
+      @include mobile {
+        text-align: center;
+      }
+    }
+
+    button {
+      background-color: #ff7f50; /* nicer coral/orange tone */
+      color: #fff;
+      border: none;
+      border-radius: 12px; /* slightly rounder */
+      padding: 12px 24px; /* more balanced padding */
+      min-width: 180px; /* keeps buttons consistent on smaller screens */
+      font-size: 16px;
+      font-weight: 600; /* slightly bolder for better readability */
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.25s ease-in-out; /* smoother animation */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* subtle shadow for depth */
+    }
+
+    button:hover {
+      background-color: #ff652f; /* slightly darker on hover */
+      transform: scale(1.05); /* gentle grow effect */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* enhanced hover shadow */
+    }
+
+    button:active {
+      transform: scale(0.97); /* slight press feedback */
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* subtle press shadow */
+    }
+
+    button:focus {
+      outline: none; /* removes default focus outline */
+      box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.5); /* custom focus ring */
+    }
+  }
+}
