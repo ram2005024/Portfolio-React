@@ -3,6 +3,7 @@ import ToggleBtn from "./ToggleBtn";
 import Link from "./Link";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useEffect } from "react";
 const SideBar = () => {
   const variance = {
     opening: {
@@ -22,6 +23,12 @@ const SideBar = () => {
     },
   };
   const [opening, changeState] = useState(false);
+  useEffect(() => {
+    if (opening) {
+      document.body.style.overflow = "hidden";
+    } else document.body.style.overflow = "auto";
+    return () => (document.body.style.overflow = "auto");
+  }, [opening]);
   return (
     <motion.div
       className="side-bar"

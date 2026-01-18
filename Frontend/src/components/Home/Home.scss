@@ -2,6 +2,7 @@
 .hero-container {
   height: calc(100vh - 100px);
   position: relative;
+  overflow-x: hidden;
   @include mobile {
     overflow: hidden;
   }

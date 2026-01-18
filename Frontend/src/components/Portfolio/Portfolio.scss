@@ -1,113 +1,139 @@
 @import "../../styles/mixins";
+
 .portfolio-container {
   position: relative;
+
   .mainTitle {
     position: sticky;
     top: 0;
     left: 0;
     text-align: center;
-    padding-top: 50px;
+    padding: 40px 16px 20px;
     font-size: 32px;
-
     color: orange;
+    background: blue($color: #000000);
+    z-index: 10;
+
     @include mobile {
       font-size: 20px;
+      padding: 20px 10px;
+      left: 10px;
       color: yellow;
     }
+    h1 {
+      @include mobile {
+        font-size: 30px;
+      }
+    }
   }
+
   .progressBar {
-    height: 10px;
+    height: 8px;
     background-color: white;
     border-radius: 10px;
+    margin-top: 10px;
+
+    @include mobile {
+      height: 6px;
+    }
   }
 }
+
 .container {
-  height: 100%;
   width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
   gap: 40px;
   max-width: 1366px;
+  padding: 40px 20px;
+  overflow-x: hidden;
+
   @include mobile {
     flex-direction: column;
     gap: 20px;
+    padding: 20px 12px;
   }
+
   .image-wrapper {
-    height: 50%;
-    width: 100%;
-    @include mobile {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-    }
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     img {
-      height: 100%;
-      width: 600px;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
       object-fit: contain;
+
       @include mobile {
-        width: auto;
-        height: 60%;
+        max-width: 90%;
       }
     }
   }
+
   .title-wrapper {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 30px;
+
     @include mobile {
-      gap: 10px;
-      y: auto;
+      gap: 16px;
       align-items: center;
-      justify-content: center;
-      height: auto;
-      width: auto;
+      text-align: center;
     }
+
     h1 {
-      font-size: 80px;
+      font-size: clamp(36px, 6vw, 80px);
+
       @include mobile {
-        font-size: 40px;
-        text-align: center;
+        font-size: 36px;
       }
     }
+
     p {
       color: gray;
-      font-size: 1.3rem;
-      @include mobile {
-        text-align: center;
-      }
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      line-height: 1.6;
+      max-width: 600px;
     }
 
     button {
-      background-color: #ff7f50; /* nicer coral/orange tone */
+      background-color: #ff7f50;
       color: #fff;
       border: none;
-      border-radius: 12px; /* slightly rounder */
-      padding: 12px 24px; /* more balanced padding */
-      min-width: 180px; /* keeps buttons consistent on smaller screens */
+      border-radius: 12px;
+      padding: 12px 24px;
+      min-width: 180px;
       font-size: 16px;
-      font-weight: 600; /* slightly bolder for better readability */
-      text-align: center;
+      font-weight: 600;
       cursor: pointer;
-      transition: all 0.25s ease-in-out; /* smoother animation */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* subtle shadow for depth */
-    }
+      transition: all 0.25s ease-in-out;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 
-    button:hover {
-      background-color: #ff652f; /* slightly darker on hover */
-      transform: scale(1.05); /* gentle grow effect */
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* enhanced hover shadow */
-    }
+      @include mobile {
+        width: 100%;
+        max-width: 220px;
+      }
 
-    button:active {
-      transform: scale(0.97); /* slight press feedback */
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* subtle press shadow */
-    }
+      &:hover {
+        background-color: #ff652f;
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
 
-    button:focus {
-      outline: none; /* removes default focus outline */
-      box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.5); /* custom focus ring */
+      &:active {
+        transform: scale(0.97);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.5);
+      }
     }
   }
 }
