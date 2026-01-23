@@ -43,6 +43,12 @@ const Nav = () => {
           "
             />
           </a>
+          <a href="https://github.com/ram2005024">
+            <img
+              src="/github.png
+          "
+            />
+          </a>
           <a href="https://x.com/shekhar_1010">
             <img
               src="twitter.png
