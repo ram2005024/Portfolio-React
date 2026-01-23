@@ -1,5 +1,5 @@
 import "./Nav.scss";
-import { animate, motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 import SideBar from "./SideBar/SideBar";
 const Nav = () => {
   const variants = {
@@ -45,8 +45,12 @@ const Nav = () => {
           </a>
           <a href="https://github.com/ram2005024">
             <img
-              src="/github.png
+              src="/github.svg
           "
+              style={{
+                background: "white",
+                borderRadius: "4px",
+              }}
             />
           </a>
           <a href="https://x.com/shekhar_1010">
