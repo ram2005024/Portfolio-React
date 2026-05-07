@@ -53,7 +53,7 @@ const Nav = () => {
               }}
             />
           </a>
-          <a href="www.linkedin.com/in/ram-sharma-a07051409">
+          <a href="https://www.linkedin.com/in/ram-sharma-a07051409/">
             <img
               src="/linkedin.svg
           "
